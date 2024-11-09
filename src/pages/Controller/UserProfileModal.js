@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/UserProfileModal.css';
+import '../../components/UserProfileModal.css';
 
 const UserProfileModal = ({ isOpen, onClose, user }) => {
   if (!isOpen || !user) return null;

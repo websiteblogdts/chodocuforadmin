@@ -1,11 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import AdminApiService from '../services/adminApiService'; 
+import AdminApiService from '../../services/adminApiService'; 
 import Swal from 'sweetalert2';
 import { FiEdit, FiTrash, FiCheck, FiX,FiPlusCircle ,FiXCircle,FiRotateCcw} from 'react-icons/fi';
 import { MdOutlineRestorePage,MdOutlineAddTask } from "react-icons/md";
-
-import "../components/CategoryManagement.css"; 
+import "../../components/CategoryManagement.css"
 
 const CategoryManagement = () => {
   const [categories, setCategories] = useState([]);

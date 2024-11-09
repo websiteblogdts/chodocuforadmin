@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate, useLocation } from "react-router-dom";
-import Dashboard from './pages/Dashboard';
-import UserManagement from './pages/UserManagement';
-import CategoryManagement from './pages/CategoryManagement';
-import ProductManagement from './pages/ProductManagement';
+import Dashboard from './pages/Controller/Dashboard';
+import UserManagement from './pages/Controller/UserManagement';
+import CategoryManagement from './pages/Controller/CategoryManagement';
+import ProductManagement from './pages/Controller/ProductManagement';
 import Login from './pages/Login/Login';
-import ProtectedRoute from './pages/ProtectedRoute';
+import ProtectedRoute from './pages/Controller/ProtectedRoute';
 import { isAuthenticated } from './utils/auth';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';

@@ -2,8 +2,8 @@ import Swal from 'sweetalert2';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEdit, FaTrash, FaLock, FaUnlock } from 'react-icons/fa'; // Import icons
-import AdminApiService from '../services/adminApiService';
-import "../components/UserManagement.css"; 
+import AdminApiService from '../../services/adminApiService';
+import "../../components/UserManagement.css"; 
 import UserProfileModal from './UserProfileModal'; // Import the UserProfileModal
 
 const UserManagement = () => {

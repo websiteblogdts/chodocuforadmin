@@ -16,7 +16,14 @@ const changeStatusAccount = (userId, data) => axiosInstance.put(`/admin/changsta
 // API quản lý Product
 const getProductsByApprovalStatus = () => axiosInstance.get(`/admin/products`);
 const updateApprovedStatus = (productId) => axiosInstance.put(`/admin/product/${productId}/approved`);
-const rejectProduct = (productId) => axiosInstance.put(`/admin/product/${productId}/reject`);
+const rejectProduct = (productId, rejectedReason) =>  axiosInstance.put(`/admin/product/${productId}/reject`, {rejectedReason: rejectedReason});
+
+const getApprovedProducts = () => axiosInstance.get(`/admin/products/?approved=true`);
+const getPendingProducts = () => axiosInstance.get(`/admin/products/?approved=false`);
+const getRejectedProducts = () => axiosInstance.get(`/admin/rejected-products`);
+
+
+
 
 // API quản lý Category
 const createCategory = (data) => axiosInstance.post(`/admin/createcategory`, data);
@@ -34,7 +41,6 @@ const AdminApiService = {
   updateUserById,
   deleteUserById,
   changeStatusAccount,
-  getProductsByApprovalStatus,
   updateApprovedStatus,
   rejectProduct,
   createCategory,
@@ -43,6 +49,10 @@ const AdminApiService = {
   updateCategory,
   restoreCategory,
   getDeletedCategories,
+  getProductsByApprovalStatus,
+  getApprovedProducts,
+  getPendingProducts,
+  getRejectedProducts,
 };
 
 // Xuất AdminApiService như một default

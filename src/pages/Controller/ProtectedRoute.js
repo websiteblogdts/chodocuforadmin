@@ -1,7 +1,7 @@
 // pages/ProtectedRoute.js
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { isAuthenticated } from "../utils/auth"; // Import hàm kiểm tra token
+import { isAuthenticated } from "../../utils/auth"; // Import hàm kiểm tra token
 
 const ProtectedRoute = ({ children }) => {
   if (!isAuthenticated()) {
