@@ -1,0 +1,98 @@
+
+.category-management {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+   /* Modal Background */
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease;
+  }
+ /* Thêm kiểu cho các mục category với nền xen kẽ vàng và xanh */
+.category-item:nth-child(even) {
+  background-color: #fef08a; /* Màu vàng sáng */
+}
+
+.category-item:nth-child(odd) {
+  background-color: #86efac; /* Màu xanh lá sáng */
+}
+
+.category-item {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+.category-item:hover {
+  background-color: #f0f0f0; /* Hiệu ứng hover nhẹ */
+}
+
+.icon-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}
+
+.icon-button:focus {
+  outline: none;
+}
+
+  
+.modal {
+  position: fixed; /* Cố định modal trên màn hình */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
+  z-index: 9999; /* Đảm bảo modal trên tất cả các phần tử */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px; /* Đảm bảo modal không rộng quá */
+  max-height: 80vh; /* Cho phép cuộn nếu nội dung dài */
+  overflow-y: auto; /* Cuộn khi nội dung dài */
+  z-index: 10000; /* Đảm bảo modal content luôn trên top */
+}
